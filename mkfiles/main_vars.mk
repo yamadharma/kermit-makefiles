@@ -82,7 +82,6 @@ ifndef FINAL_POST_LATEX_CMD
 FINAL_POST_LATEX_CMD =
 endif
 
-
 # Shell command used to launch BibTeX
 ifndef BIBTEX_CMD
 BIBTEX_CMD = bibtex
@@ -109,9 +108,14 @@ ifeq ("${MULTIPLE_BIB_FILES}","")
 MULTIPLE_BIB_FILES=${FILE}
 endif
 
+# Pre bibtex command
+ifndef PRE_BIBTEX_CMD
+PRE_BIBTEX_CMD = echo "No pre-bibtex command"
+endif
+
 # Post bibtex command
 ifndef POST_BIBTEX_CMD
-POST_BIBTEX_CMD = echo "No post-latex command"
+POST_BIBTEX_CMD = echo "No post-bibtex command"
 endif
 
 # Shell command used to translate DVI to PS
