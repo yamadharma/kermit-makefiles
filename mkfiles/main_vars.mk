@@ -277,6 +277,7 @@ TMPFILES = bibtex.stamp ${AUXFILE} *.log ${BBLFILE} *.blg \
            VARIABLES \
            *.css ${FILE}-js.* *.pfg lst.tex \
            *.4tc *.4ct *.idv *.${HTML_EXT} *.lg *.xref *.4dx *.4ix *.dvi \
+           *.bak *.pyg \
            ${EPS_CONVERTED_TO_PDF} \
            ${TMPFILES_LOCAL}
 
