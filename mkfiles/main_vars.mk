@@ -92,7 +92,8 @@ endif
 BIBTEX_FLAGS =
 
 # Shell command used to fix BibTeX files
-FIX_BBL_CMD = mkfiles/scripts/fixbbl.py
+# FIX_BBL_CMD = mkfiles/scripts/fixbbl.py
+FIX_BBL_CMD =
 
 # Check if has bibtex citation
 HAS_BIBTEX_CITATION_CMD = mkfiles/scripts/has_bibtex_citation
@@ -261,6 +262,8 @@ SOURCE_IMAGES =
 
 MAKEFILE_FILENAME = Makefile
 
+
+
 TMPFILES = bibtex.stamp ${AUXFILE} *.log ${BBLFILE} *.blg \
            *.cb *.toc *.out *.lof *.lot *.los *.maf *.snm *.nav \
            *.fot \
@@ -278,6 +281,7 @@ TMPFILES = bibtex.stamp ${AUXFILE} *.log ${BBLFILE} *.blg \
            *.css ${FILE}-js.* *.pfg lst.tex \
            *.4tc *.4ct *.idv *.${HTML_EXT} *.lg *.xref *.4dx *.4ix *.dvi \
            *.bak *.pyg \
+           *.bbl *.bcf *.blg *-blx.aux *-blx.bib *.brf *.run.xml \
            ${EPS_CONVERTED_TO_PDF} \
            ${TMPFILES_LOCAL}
 
