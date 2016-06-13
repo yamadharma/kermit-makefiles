@@ -27,3 +27,12 @@
   \setbeamertemplate{navigation symbols}{}
 \fi
 
+
+% \setbeamertemplate{section in toc}[default]
+\AtBeginSection[] {
+\begin{frame}
+% \frametitle{Outline}
+% \frametitle{Содержание}
+\tableofcontents[currentsection]
+\note{\tableofcontents[currentsection]}
+\end{frame}}
