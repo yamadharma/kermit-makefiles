@@ -11,6 +11,9 @@
 
 \makeatletter
 % Not needed for minted v2.0
+\@ifpackagelater{minted}{2015/01/31}
+{}
+{
 \ifdefined\minted@write@detok\@empty\else
 \newcommand{\minted@write@detok}[1]{%
   \immediate\write\FV@OutFile{\detokenize{#1}}}%
@@ -37,6 +40,7 @@
   \immediate\write\minted@code{\expandafter\detokenize\expandafter{#1}}%
   \immediate\closeout\minted@code}
 \fi
+}
 \makeatother
 
 %}}}
