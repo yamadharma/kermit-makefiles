@@ -48,6 +48,11 @@
 %% Выравнивание по центру
 %\RecustomVerbatimEnvironment{Verbatim}{BVerbatim}{}
 
+% Версия для печати
+\ifdefined\printable
+    \usemintedstyle{bw}
+\fi
+
 %%% Local Variables:
 %%% mode: latex
 %%% coding: utf-8-unix
