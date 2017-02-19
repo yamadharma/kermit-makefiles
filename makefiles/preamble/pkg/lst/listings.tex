@@ -7,8 +7,16 @@
 %    numbers=left, 
 %    numberstyle=\tiny,
 %    upquote=false,
-    inputencoding=utf8/koi8-r,%
+    basicstyle=\ttfamily,%
+    breaklines=true,%
+    breakatwhitespace=true,%
+    postbreak=\space,%
+    prebreak={\mbox{\quad$\hookleftarrow$}},%
 }
+
+\ifthenelse{\boolean{luatex}\OR\boolean{xetex}}{}{%
+    \lstset{inputencoding=utf8/koi8-r}}
+
 \lstloadlanguages{C,make,bash,[x86masm]Assembler,[LaTeX]TeX}
 
 
