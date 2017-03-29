@@ -1,26 +1,38 @@
-#-----------------------------------
-#----------- DO NOT CHANGE BELOW
-#-----------------------------------
+# -*- mode: make -*-
 
 # Update the makeindex flags with the style file
 ifeq ("${MAKEINDEX_CMD}","makeindex")
 ifneq ("-${MAKEINDEX_STYLEFILE}","-")
     MAKEINDEX_FLAGS += -s "${MAKEINDEX_STYLEFILE}"
 endif
-else
-    MAKEINDEX_FLAGS += -o ${INDFILE} "${MAKEINDEX_STYLEFILE}"
 endif
 
+ifeq ("${MAKEINDEX_CMD}","upmendex")
+ifneq ("-${MAKEINDEX_STYLEFILE}","-")
+    MAKEINDEX_FLAGS += -s "${MAKEINDEX_STYLEFILE}"
+endif
+endif # END upmendex
+
+ifeq ("${MAKEINDEX_CMD}","xindy")
+    MAKEINDEX_FLAGS += -o ${INDFILE} "${MAKEINDEX_STYLEFILE}"
+endif # END xindy
+
 ifndef MAKEINDEX_FULL_CMD
+
 ifeq ("${MAKEINDEX_CMD}","makeindex")
     MAKEINDEX_FULL_CMD = ${MAKEINDEX_CMD} ${MAKEINDEX_FLAGS} ${IDXFILE}
-else
+endif # END makeindex
+
 ifeq ("${MAKEINDEX_CMD}","xindy")
     # MAKEINDEX_FULL_CMD = ${TEX2XINDY} < ${IDXFILE} > index.raw ; ${MAKEINDEX_CMD} ${MAKEINDEX_FLAGS} index.raw
     MAKEINDEX_FULL_CMD = ${MAKEINDEX_CMD} -I latex -M ${MAKEINDEX_STYLEFILE} ${IDXFILE}
-endif
-endif
-endif
+endif # END xindy
+
+ifeq ("${MAKEINDEX_CMD}","upmendex")
+    MAKEINDEX_FULL_CMD = ${MAKEINDEX_CMD} ${MAKEINDEX_FLAGS} ${IDXFILE}
+endif # END upmendex
+
+endif # END MAKEINDEX_FULL_CMD
 
 TEX4HT_MAKEINDEX_FULL_CMD = tex '\def\filename{{default}{idx}{4dx}{ind}} \input  idxmake.4ht';	makeindex -o default.ind default.4dx
 

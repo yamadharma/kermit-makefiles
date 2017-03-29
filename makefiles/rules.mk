@@ -13,7 +13,7 @@ LATEX_GENERATION_PROCEDURE = pdf
 #MULTIPLE_BIB_FILES = bu*
 
 # Shell command used to launch MakeIndex
-# makeindex | xindy
+# makeindex | xindy | upmendex
 MAKEINDEX_CMD = xindy
 
 # Style file for MakeIndex
