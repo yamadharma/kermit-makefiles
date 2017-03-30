@@ -1,3 +1,4 @@
+# -*- mode: make -*-
 
 # Name of the main TeX file (without extension and path)
 ifndef FILE
@@ -248,7 +249,11 @@ PDFFILE=${FILE}.pdf
 PSFILE=${FILE}.ps
 BBLFILE=${FILE}.bbl
 AUXFILE=${FILE}.aux
+
+ifndef IDXFILE
 IDXFILE=${FILE}.idx
+endif
+
 INDFILE=${FILE}.ind
 GLOFILE=${FILE}.glo
 GLSFILE=${FILE}.gls
