@@ -14,12 +14,19 @@ LATEX_GENERATION_PROCEDURE = pdf
 
 # Shell command used to launch MakeIndex
 # makeindex | xindy | upmendex
-MAKEINDEX_CMD = xindy
+MAKEINDEX_CMD = upmendex
 
 # Style file for MakeIndex
 MAKEINDEX_STYLEFILE = index.xdy
 
 #MAKEINDEX_FULL_CMD = ./scripts/t2a2utf ${IDXFILE}; recode UTF8..CP1251 ${IDXFILE} ; ${MAKEINDEX_CMD} ${MAKEINDEX_FLAGS} ${IDXFILE}; enca -c default.ind
+
+# Shell command used to make glossary
+# makeindex | xindy | upmendex
+MAKEGLOS_CMD = xindy
+
+# Style file for glossary
+#MAKEGLOS_STYLEFILE = index.xdy
 
 #TEX4HT_FINAL_POST_CMD = scripts/html-fix
 
