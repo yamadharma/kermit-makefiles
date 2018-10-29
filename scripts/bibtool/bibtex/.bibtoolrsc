@@ -59,6 +59,9 @@ new.entry.type{patent}
 resource bibtool.d/eprint
 resource bibtool.d/book
 
+# Biblatex specific
+resource bibtool.d/language
+
 #
 # Semantic checks for year fields
 #
