@@ -1,18 +1,5 @@
-# pretty printing options
-key.format = short
-preserve.keys=on 
-preserve.key.case=on
-print.align=0
-print.align.key=0
-print.align.string=0
-print.indent=2
-print.use.tab=off
-print.wide.equal=on
-sort = on
-suppress.initial.newline=on
-verbose = on
-print.line.length = 200
-
+# Preamble
+resource bibtool/include/preamble
 
 new.entry.type{online}
 new.entry.type{patent}
@@ -53,17 +40,17 @@ new.entry.type{patent}
 #rewrite.rule = {language # "English"}
 
 # Sanitize month
-resource bibtool.d/month
+resource bibtool/include/month
 
 # Use biblatex
 resource biblatex
 
 # Fix for concret entry types
-resource bibtool.d/eprint
-resource bibtool.d/book
+resource bibtool/include/eprint
+resource bibtool/include/book
 
 # Biblatex specific
-resource bibtool.d/language
+resource bibtool/include/language
 
 
 #
