@@ -1,6 +1,9 @@
 # Preamble
 resource bibtool/include/preamble
 
+# Use biblatex
+resource biblatex
+
 new.entry.type{online}
 new.entry.type{patent}
 
@@ -41,9 +44,6 @@ new.entry.type{patent}
 
 # Sanitize month
 resource bibtool/include/month
-
-# Use biblatex
-resource biblatex
 
 # Fix for concret entry types
 resource bibtool/include/eprint
