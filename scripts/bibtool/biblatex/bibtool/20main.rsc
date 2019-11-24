@@ -1,12 +1,6 @@
 # Preamble
 resource bibtool/include/preamble
 
-# Use biblatex
-resource biblatex
-
-new.entry.type{online}
-new.entry.type{patent}
-
 #fmt.name.name = {}
 #fmt.name.pre = {}
 #fmt.inter.name = {}

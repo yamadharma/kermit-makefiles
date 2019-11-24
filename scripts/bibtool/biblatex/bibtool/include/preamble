@@ -12,3 +12,9 @@ sort = on
 suppress.initial.newline=on
 verbose = on
 print.line.length = 200
+
+# Use biblatex
+resource biblatex
+
+new.entry.type{online}
+new.entry.type{patent}
