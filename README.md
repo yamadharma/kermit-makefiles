@@ -3,12 +3,15 @@
 ## Каталоги ##
 
 ### doc ###
+
 Документация.
 
 ### makefiles ###
+
 Основные makefiles.
 
 ### additional ###
+
 Добавочные файлы для разного типа работ.
 
 ## Установка ##
@@ -17,13 +20,13 @@
 
 - Набор классов kermit для LaTeX
 
-<https://bitbucket.org/yamadharma/soft-tex-kermit>
+<https://github.com/yamadharma/kermit>
 
 - Скрипты для сборки проекта LaTeX
 
-<https://bitbucket.org/yamadharma/soft-tex-kermit-makefiles>
+<https://github.com/yamadharma/kermit-makefiles>
 
 - Набор шаблонов разных документов
 
-<https://bitbucket.org/yamadharma/soft-tex-kermit-templates>
+<https://github.com/yamadharma/kermit-templates>
 

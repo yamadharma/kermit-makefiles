@@ -1,5 +1,11 @@
 
-0.4.24 / 2020-06-09
+v0.4.25 / 2020-07-10
+==================
+
+  * Added: LICENSE
+  * Added: amsmath loading befor all
+
+v0.4.24 / 2020-06-09
 ==================
 
   * Fixed: bibbtool scripts include
@@ -12,7 +18,7 @@
   * Removed feature Ligatures=TeX
   * Added libertinus font
 
-0.4.23 / 2020-03-27
+v0.4.23 / 2020-03-27
 ==================
 
   * Moved to git-flow-avh
