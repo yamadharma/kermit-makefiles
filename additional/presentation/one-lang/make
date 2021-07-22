@@ -2,6 +2,7 @@
 
 make FILE=default $@
 #make FILE=default_16x9 $@
+#make FILE=default_16x10 $@
 #make FILE=default_print $@
 #make FILE=default_only-notes $@
 #make FILE=default_with-notes $@
