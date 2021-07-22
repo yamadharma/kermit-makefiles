@@ -1,11 +1,13 @@
 %%%
 
 \ifpdf
-    \usepackage{cmap}
+% \usepackage{cmap}             % pure T1 fonts
+% \usepackage[resetfonts]{cmap} % pure T1 fonts, reset CM
+% \usepackage{mmap}             % cmap + mathematics (ASCII)
+\usepackage[noTeX]{mmap}        % cmap + mathematics (Unicode)
 \fi
 \usepackage{textcomp}
 % \usepackage{mathtext}
-
 
 \usepackage[T1,T2A]{fontenc}
 %{{{ Use only one alternative
@@ -27,7 +29,7 @@
 
 \input{preamble/fix/latex}
 
-%%% Local Variables: 
+%%% Local Variables:
 %%% mode: latex
 %%% coding: utf-8-unix
-%%% End: 
+%%% End:
