@@ -1,4 +1,4 @@
-# Scripts for LaTeX projects
+# Скрипты для сборки проекта LaTeX #
 
 ## Каталоги ##
 
