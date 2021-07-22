@@ -1,3 +1,12 @@
+## [1.0.1](https://github.com/yamadharma/kermit-makefiles/compare/v1.0.0...v1.0.1) (2021-07-22)
+
+
+### Bug Fixes
+
+* **beamer:** add aspect ratio 16x10 to beamer class ([fc5ae38](https://github.com/yamadharma/kermit-makefiles/commit/fc5ae386d31d26d3f74c43f409643f4f1280ac41))
+
+
+
 # [1.0.0](https://github.com/yamadharma/kermit-makefiles/compare/v0.4.26...v1.0.0) (2021-07-22)
 
 
