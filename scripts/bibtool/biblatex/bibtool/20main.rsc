@@ -20,10 +20,10 @@ resource bibtool/include/preamble
 
 
 ## Sanitize double {{ }}
-#rewrite.rule = {"^{{\(.*\)}}$" = "{\1}"}
+rewrite.rule = {"^{{\(.*\)}}$" = "{\1}"}
 
 ## Replace " ... " with { ... }
-#rewrite.rule = {"^\"\(.*\)\"$" = "{\1}"}
+rewrite.rule = {"^\"\(.*\)\"$" = "{\1}"}
 
 # Get rid of useless fields
 #delete.field = {abstract}
@@ -43,8 +43,9 @@ resource bibtool/include/month
 resource bibtool/include/eprint
 resource bibtool/include/book
 
-# Biblatex specific
+# Fix fields
 resource bibtool/include/language
+resource bibtool/include/doi
 
 
 #
