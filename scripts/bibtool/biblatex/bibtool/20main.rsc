@@ -82,6 +82,7 @@ pass.comments = off
 
 # rewrite address
 rewrite.rule = {address # "Москва" # "М."}
+rewrite.rule = {location # "Москва" # "М."}
 
 # rename url date field to be correctly used by BibTeX, BibLaTeX, abnTeX etc
 rename.field {urldate = urlaccessdate}
