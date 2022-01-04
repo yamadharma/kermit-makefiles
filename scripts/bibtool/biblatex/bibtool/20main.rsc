@@ -40,6 +40,7 @@ rewrite.rule = {"^\"\(.*\)\"$" = "{\1}"}
 resource bibtool/include/month
 
 # Fix for concret entry types
+resource bibtool/include/article
 resource bibtool/include/eprint
 resource bibtool/include/book
 

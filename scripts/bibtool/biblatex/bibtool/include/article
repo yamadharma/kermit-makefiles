@@ -1,0 +1,3 @@
+# For Article
+rename.field {journal=journaltitle}
+add.field = {journal = "%s(journaltitle)"}
