@@ -47,7 +47,7 @@ resource bibtool/include/book
 # Fix fields
 resource bibtool/include/language
 resource bibtool/include/doi
-
+resource bibtool/include/location
 
 #
 # Semantic checks for year fields
@@ -80,10 +80,6 @@ rewrite.rule {"^[\"{] *\([0-9]+\) *[\"}]$" "\1"}
 check.double = off
 check.double.delete = off
 pass.comments = off
-
-# rewrite address
-rewrite.rule = {address # "Москва" # "М."}
-rewrite.rule = {location # "Москва" # "М."}
 
 # rename url date field to be correctly used by BibTeX, BibLaTeX, abnTeX etc
 rename.field {urldate = urlaccessdate}

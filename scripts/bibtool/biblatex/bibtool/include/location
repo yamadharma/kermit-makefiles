@@ -1,0 +1,5 @@
+# rewrite address
+rewrite.rule = {address # "Москва" # "М."}
+rewrite.rule = {location # "Москва" # "М."}
+rewrite.rule = {address # "Санкт-Петербург" # "СПб."}
+rewrite.rule = {location # "Санкт-Петербург" # "СПб."}
