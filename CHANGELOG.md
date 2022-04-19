@@ -1,3 +1,22 @@
+## [1.0.2](https://github.com/yamadharma/kermit-makefiles/compare/v1.0.1...v1.0.2) (2022-04-19)
+
+
+### Bug Fixes
+
+* **bib:** fix eprint generate for biblatex ([02bccef](https://github.com/yamadharma/kermit-makefiles/commit/02bccef0d302218bc723afe005a86e6537d62437))
+* **biblatex:** fix gost-biblatex for polyglossia from 2022 ([7219a66](https://github.com/yamadharma/kermit-makefiles/commit/7219a66e5f725f20e8f65e9f134eecf958d5c547))
+* **bibtool:** add rewrite rule for location ([220b5aa](https://github.com/yamadharma/kermit-makefiles/commit/220b5aa87f57d7f217327dc49164f719cb28ca12))
+* **bibtool:** enable filters for `doi` ([c49356c](https://github.com/yamadharma/kermit-makefiles/commit/c49356cb0b4e55c5ca1829a994f41213ee145d49))
+* **bibtool:** fix location rewrite ([47ae422](https://github.com/yamadharma/kermit-makefiles/commit/47ae422e8689572383c59ff1253c9afc2749f1d8))
+* **fonts:** fix default font ([cd0d056](https://github.com/yamadharma/kermit-makefiles/commit/cd0d056b119d0bdf0b93f943113fb846514ba6ae))
+
+
+### Features
+
+* **bibtool:** add journaltitle=journal support ([046d0b9](https://github.com/yamadharma/kermit-makefiles/commit/046d0b964d996cd761014ca65ff843cf9f5313ab))
+
+
+
 ## [1.0.1](https://github.com/yamadharma/kermit-makefiles/compare/v1.0.0...v1.0.1) (2021-07-22)
 
 
