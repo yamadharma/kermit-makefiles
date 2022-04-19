@@ -20,10 +20,10 @@ resource bibtool/include/preamble
 
 
 ## Sanitize double {{ }}
-#rewrite.rule = {"^{{\(.*\)}}$" = "{\1}"}
+rewrite.rule = {"^{{\(.*\)}}$" = "{\1}"}
 
 ## Replace " ... " with { ... }
-#rewrite.rule = {"^\"\(.*\)\"$" = "{\1}"}
+rewrite.rule = {"^\"\(.*\)\"$" = "{\1}"}
 
 # Get rid of useless fields
 #delete.field = {abstract}
@@ -40,12 +40,14 @@ resource bibtool/include/preamble
 resource bibtool/include/month
 
 # Fix for concret entry types
+resource bibtool/include/article
 resource bibtool/include/eprint
 resource bibtool/include/book
 
-# Biblatex specific
+# Fix fields
 resource bibtool/include/language
-
+resource bibtool/include/doi
+resource bibtool/include/location
 
 #
 # Semantic checks for year fields
@@ -78,9 +80,6 @@ rewrite.rule {"^[\"{] *\([0-9]+\) *[\"}]$" "\1"}
 check.double = off
 check.double.delete = off
 pass.comments = off
-
-# rewrite address
-rewrite.rule = {address # "Москва" # "М."}
 
 # rename url date field to be correctly used by BibTeX, BibLaTeX, abnTeX etc
 rename.field {urldate = urlaccessdate}
