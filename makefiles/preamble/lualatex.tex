@@ -6,12 +6,17 @@
 %% Dirty hack. We need amssymb befor xunicode
 \usepackage{amssymb}
 
-\usepackage{polyglossia}
+%% Choose only one packege for multilingual support
+\def\multilingualrealization{babel}
+% \def\multilingualrealization{polyglossia}
+
+\input{preamble/pkg/\multilingualrealization/common}
 
 \usepackage{lualatex-math}
 
-\input{preamble/pkg/polyglossia/default/russian}
-\input{preamble/pkg/polyglossia/other/english}
+
+\input{preamble/pkg/\multilingualrealization/default/russian}
+\input{preamble/pkg/\multilingualrealization/other/english}
 
 %{{{ Fonts
 
