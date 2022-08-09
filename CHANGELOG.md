@@ -1,3 +1,18 @@
+## [1.0.3](https://github.com/yamadharma/kermit-makefiles/compare/v1.0.2...v1.0.3) (2022-08-09)
+
+
+### Bug Fixes
+
+* **preamble:** activate numeric-comp option for ieee biblatex style ([1fa71f8](https://github.com/yamadharma/kermit-makefiles/commit/1fa71f87c476e2e7a908cfa2bad4c9386df9d846))
+
+
+### Features
+
+* **preamble:** add babel support for lualatex ([3839ec4](https://github.com/yamadharma/kermit-makefiles/commit/3839ec404539158b59fd465e826307b5e130e786))
+* **preamble:** add upright package for listings ([72ea101](https://github.com/yamadharma/kermit-makefiles/commit/72ea101aa16a27019f2e5ee3f966daad30d48bac))
+
+
+
 ## [1.0.2](https://github.com/yamadharma/kermit-makefiles/compare/v1.0.1...v1.0.2) (2022-04-19)
 
 
