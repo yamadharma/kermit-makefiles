@@ -1,4 +1,4 @@
-%%%
+%%% Lualatex preamble
 
 %% This package provides emulation of pdfTeX primitives for LuaTeX v0.85+
 \RequirePackage{luatex85}
@@ -7,13 +7,13 @@
 \usepackage{amssymb}
 
 %% Choose only one packege for multilingual support
-\def\multilingualrealization{babel}
-% \def\multilingualrealization{polyglossia}
+% \def\multilingualrealization{babel}
+\def\multilingualrealization{polyglossia}
 
 \input{preamble/pkg/\multilingualrealization/common}
 
-\usepackage{lualatex-math}
-
+\AtBeginDocument{%
+  \usepackage{lualatex-math}}
 
 \input{preamble/pkg/\multilingualrealization/default/russian}
 \input{preamble/pkg/\multilingualrealization/other/english}
