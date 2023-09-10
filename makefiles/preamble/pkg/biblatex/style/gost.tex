@@ -4,17 +4,20 @@
 parentracker=true,%
 backend=biber,%
 hyperref=auto,%
-language=auto,%
-%autolang=other*,%
+language=auto,
+%language=autocite,
+%language=autobib,
 %autolang=langname,%
+autolang=other*,%
 langhook=extras,%
 citestyle=gost-numeric,%
 defernumbers=true,%
 bibstyle=gost-footnote,%
 style=gost-numeric,%
 % disable printing the URLs and ISBNs in the bibliography
-%url=false,
-%isbn=false
+url=false,
+isbn=false,
+eprint=true,
 % enables/disables generation of the back references to the citation,
 % which are usually number(s) of the page where citation appears
 %backref=true,
