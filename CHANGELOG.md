@@ -1,3 +1,14 @@
+## [1.0.4](https://github.com/yamadharma/kermit-makefiles/compare/v1.0.3...v1.0.4) (2023-09-10)
+
+
+### Bug Fixes
+
+* **biblatex:** fix gost biblatex options ([ee8a779](https://github.com/yamadharma/kermit-makefiles/commit/ee8a779b9fac45d947cc07d2a042e43bc51a927e))
+* **lulatex:** fix loading lualatex-math ([c66c0d8](https://github.com/yamadharma/kermit-makefiles/commit/c66c0d8bc598a34a4822e857d8d8187f533fb5a7))
+* **main:** fix makefile ([0e39b96](https://github.com/yamadharma/kermit-makefiles/commit/0e39b96fb29b98be138b9e945c012a411652d9f1))
+
+
+
 ## [1.0.3](https://github.com/yamadharma/kermit-makefiles/compare/v1.0.2...v1.0.3) (2022-08-09)
 
 
