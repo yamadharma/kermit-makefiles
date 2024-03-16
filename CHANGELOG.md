@@ -1,3 +1,17 @@
+## [1.0.5](https://github.com/yamadharma/kermit-makefiles/compare/v1.0.4...v1.0.5) (2024-03-16)
+
+
+### Bug Fixes
+
+* **class:** fix beamer options ([38cd95a](https://github.com/yamadharma/kermit-makefiles/commit/38cd95a1196093b47926089a3ffc5bf8f7b46d86))
+
+
+### Features
+
+* **fonts:** add new font sets : ibm plex, adobe source, stix2 ([2a4e033](https://github.com/yamadharma/kermit-makefiles/commit/2a4e033cf6224a056f60ecbed410d4d516fb6efe))
+
+
+
 ## [1.0.4](https://github.com/yamadharma/kermit-makefiles/compare/v1.0.3...v1.0.4) (2023-09-10)
 
 
