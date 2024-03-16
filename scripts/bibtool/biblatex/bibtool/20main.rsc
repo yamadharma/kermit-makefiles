@@ -81,8 +81,8 @@ check.double = off
 check.double.delete = off
 pass.comments = off
 
-# rename url date field to be correctly used by BibTeX, BibLaTeX, abnTeX etc
-rename.field {urldate = urlaccessdate}
+## rename url date field to be correctly used by BibTeX, BibLaTeX, abnTeX etc
+# rename.field {urldate = urlaccessdate}
 
 #rename.field {$Misc = $Book}
 
