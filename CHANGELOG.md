@@ -1,3 +1,12 @@
+## [1.0.6](https://github.com/yamadharma/kermit-makefiles/compare/v1.0.5...v1.0.6) (2024-03-16)
+
+
+### Bug Fixes
+
+* **font:** fix plex fonts scale ([e17660e](https://github.com/yamadharma/kermit-makefiles/commit/e17660e256707cdaecee6b9cb52ebb7ce01a816e))
+
+
+
 ## [1.0.5](https://github.com/yamadharma/kermit-makefiles/compare/v1.0.4...v1.0.5) (2024-03-16)
 
 
