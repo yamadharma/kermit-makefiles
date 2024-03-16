@@ -4,10 +4,12 @@
 %% emerge media-fonts/ibm-plex
 %% emerge media-fonts/stix-fonts
 
-\setmainfont[Ligatures={Common,TeX}]{IBM Plex Serif}
-\setromanfont[Ligatures={Common,TeX}]{IBM Plex Serif}
-\setsansfont[Ligatures={Common,TeX},Scale=MatchLowercase]{IBM Plex Sans}
-\setmonofont[Scale=MatchLowercase,Scale=0.92]{IBM Plex Mono}
+\setmainfont[Ligatures={Common,TeX},Scale=0.94]{IBM Plex Serif}
+\setromanfont[Ligatures={Common,TeX},Scale=0.94]{IBM Plex Serif}
+\setsansfont[Ligatures={Common,TeX},Scale=MatchLowercase,Scale=0.94]{IBM Plex Sans}
+\setmonofont[Scale=MatchLowercase,Scale=0.94,FakeStretch=0.9]{IBM Plex Mono}
+
+\addfontfeatures{Fractions=On}
 
 \makeatletter
 \AtBeginDocument{%
