@@ -14,6 +14,27 @@
 
 \usepackage{xifthen}
 
+%% Checks for multiple loaded packages
+%% https://tex.stackexchange.com/questions/35282/how-to-implement-a-command-that-checks-for-multiple-loaded-packages
+\makeatletter
+\newcommand{\IfPackagesLoaded}[1]{%
+  \begingroup
+  \let\next\@firstoftwo
+  \@for\@tempa:=#1\do{%
+    \expandafter\@IfPackagesLoaded\expandafter{\@tempa}%
+  }%
+  \expandafter\endgroup
+  \next
+}
+\def\@IfPackagesLoaded#1{%
+  \edef\@tempa{\zap@space#1 \@empty}% remove any spaces
+  \expandafter\ifx\csname ver@\@tempa.sty\endcsname\relax% package not loaded?
+    \let\next\@secondoftwo
+    \let\@IfPackagesLoaded\@gobble% No need for further checks
+  \fi
+}
+\makeatother
+
 % Check tex4ht
 % \provideboolean{texht}
 % \newif\iftexht\texhtfalse
@@ -41,9 +62,9 @@
   }
 }
 
-\input preamble/engine/pkg
+\input preamble/pkg
 
-\input preamble/engine/local
+\input preamble/local
 
 \iftexht
 \input preamble/engine/tex4ht

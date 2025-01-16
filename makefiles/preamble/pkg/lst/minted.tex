@@ -1,30 +1,19 @@
-%%% Работа с листингами
+%% Работа с листингами
 
 %% Для листингов, сгенерённых программой pygment
 \InputIfFileExists{lst.tex}{}{}
 
-%{{{ Package loading
-
 %% Need pygment <http://pygments.org/> <http://pypi.python.org/pypi/Pygments>
+\usepackage[
+newfloat,
+%% Counts follows sections' numbering
+% section,
+%% Counts follows chapters' numbering
+chapter,
+]
+{minted}
 
-\usepackage{minted}
-
-%% Work-around for minted code highlighting in arXiv
-%% https://tex.stackexchange.com/questions/280590/work-around-for-minted-code-highlighting-in-arxiv
-%%
-%% These allow the cache to be prepared for (finalizecache) and then
-%% used (frozencache) in an environment in which -shell-escape 
-%%
-%% Step one: compile with \usepackage[finalizecache,cachedir=.]{minted}.
-%% Step two: go to logs and output files > other logs and files and
-%% download everything with pyg.
-%% Step three: change finalizecache to frozencache and upload the
-%% tex+all those pyg files to arXiv.
-
-% \usepackage[finalizecache]{minted}
-
-%}}}
-%{{{ Поддержка русских букв
+%% Поддержка русских букв {{{
 
 \makeatletter
 % Not needed for minted v2.0
@@ -60,8 +49,8 @@
 }
 \makeatother
 
-%}}}
-%{{{ Fix minted red box around some characters
+%%}}}
+%% Fix minted red box around some characters {{{
 
 \usepackage{xpatch}
 \makeatletter
@@ -71,18 +60,56 @@
 \xpatchcmd{\mintinline}{\minted@fvset}{\minted@fvset\dontdofcolorbox}{}{}
 \makeatother
 
-%}}}
+%%}}}
 
 %% Выравнивание по центру
 %\RecustomVerbatimEnvironment{Verbatim}{BVerbatim}{}
 
-%% Версия для печати
+%% Use color style
 \ifdefined\printable
-    \usemintedstyle{bw}
+%% Версия для печати
+\usemintedstyle{bw}
+\else
+\usemintedstyle{emacs}
 \fi
 
 %% Переносить строки
 \setminted{breaklines=true}
+%% Включает нумерацию строк
+\setminted{linenos=true,
+  numberblanklines=false,
+}
+%% Автоматически удаляет из кода все обычные пробельные символы
+\setminted{autogobble=true}
+%% Автоматически разрывать длинные строки
+\setminted{breakanywhere=true}
+%% Draws two lines, one on top and one at the bottom of the code to frame it
+%% Other possible values are leftline, topline, bottomline and single.
+% \setminted{frame=lines}
+% \setminted{framesep=2mm}
+%% Установить цвет фона листинга
+% \usepackage[svgnames,dvipsnames]{xcolor}
+% \setminted{bgcolor=LightGray}
+%% Включить обычный математический режим внутри комментариев
+\setminted{mathescape=true}
+%% The line spacing of the code set to 1.2
+\setminted{baselinestretch=1.2}
+
+%% Change overall font size of minted
+\setminted{fontsize=\footnotesize}
+
+%% Set names for the English language
+\addto\captionsenglish{%
+  \providecommand\listingname{Listing}%
+  \providecommand\listlistingname{List of listings}%
+}
+%% Set names for the Russian language
+\addto\captionsrussian{%
+  \providecommand\listingname{Листинг}%
+  \providecommand\listlistingname{Список листингов}%
+%  \renewcommand\listingscaption{Листинг}%
+%  \renewcommand\listoflistingscaption{Список листингов}%
+}
 
 %%% Local Variables:
 %%% mode: latex
