@@ -120,6 +120,8 @@
 
 # minted
 *.pyg
+*.minted
+_minted/
 
 # morewrites
 *.mw
@@ -170,7 +172,7 @@ tramp
 /elpa/
 
 # reftex files
-*.rel
+# *.rel
 
 # AUCTeX auto folder
 /auto/
@@ -178,3 +180,4 @@ tramp
 # cask packages
 .cask/
 
+.DS_Store

@@ -1,3 +1,19 @@
+## [1.0.7](https://github.com/yamadharma/kermit-makefiles/compare/v1.0.6...v1.0.7) (2025-03-17)
+
+
+### Bug Fixes
+
+* **font:** fix fontspec ([69b2aeb](https://github.com/yamadharma/kermit-makefiles/commit/69b2aeb7a61e6f72d2e272e111708ef6b7ec0ebb))
+* **preamble:** fix minted for minted-3 ([6bbbbd7](https://github.com/yamadharma/kermit-makefiles/commit/6bbbbd782c36feea15cb21fa497d11c3d21a8fc5))
+
+
+### Features
+
+* **main:** rearrange directories ([10c30e1](https://github.com/yamadharma/kermit-makefiles/commit/10c30e164b464d909f164c6ff5fa5027cd96d777))
+* **makefiles:** add latexmk ([011959c](https://github.com/yamadharma/kermit-makefiles/commit/011959cdaca45379e5251337449afc30fb9b044e))
+
+
+
 ## [1.0.6](https://github.com/yamadharma/kermit-makefiles/compare/v1.0.5...v1.0.6) (2024-03-16)
 
 

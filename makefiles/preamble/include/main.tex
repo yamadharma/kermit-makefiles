@@ -14,35 +14,52 @@
 
 \usepackage{xifthen}
 
+%% Checks for multiple loaded packages
+%% https://tex.stackexchange.com/questions/35282/how-to-implement-a-command-that-checks-for-multiple-loaded-packages
+\makeatletter
+\newcommand{\IfPackagesLoaded}[1]{%
+  \begingroup
+  \let\next\@firstoftwo
+  \@for\@tempa:=#1\do{%
+    \expandafter\@IfPackagesLoaded\expandafter{\@tempa}%
+  }%
+  \expandafter\endgroup
+  \next
+}
+\def\@IfPackagesLoaded#1{%
+  \edef\@tempa{\zap@space#1 \@empty}% remove any spaces
+  \expandafter\ifx\csname ver@\@tempa.sty\endcsname\relax% package not loaded?
+    \let\next\@secondoftwo
+    \let\@IfPackagesLoaded\@gobble% No need for further checks
+  \fi
+}
+\makeatother
+
 % Check tex4ht
-%\provideboolean{texht}
-%\newif\iftexht\texhtfalse
-%\makeatletter
-%\@ifpackageloaded{tex4ht}{\texhttrue}{\texhtfalse}
-%\@ifpackageloaded{tex4xt}{\setboolean{texht}{true}}{\setboolean{texht}{false}}
-%\makeatother
+% \provideboolean{texht}
+% \newif\iftexht\texhtfalse
+% \makeatletter
+% \@ifpackageloaded{tex4ht}{\texhttrue}{\texhtfalse}
+% \@ifpackageloaded{tex4xt}{\setboolean{texht}{true}}{\setboolean{texht}{false}}
+% \makeatother
 
 % Check revtex
 \provideboolean{revtex}
 \makeatletter
 \@ifclassloaded{revtex4-1}{\setboolean{revtex}{true}}{\setboolean{revtex}{false}}
 \ifthenelse{\boolean{revtex}}{}{%
-    \@ifclassloaded{revtex4}{\setboolean{revtex}{true}}{\setboolean{revtex}{false}}
+  \@ifclassloaded{revtex4}{\setboolean{revtex}{true}}{\setboolean{revtex}{false}}
 }
 \makeatother
 
 \ifthenelse{\boolean{luatex}}
-    {\input preamble/lualatex}
-%else
+{\input preamble/engine/lualatex}
 {\ifthenelse{\boolean{xetex}}
-    {\input preamble/xelatex}
-    %else
-    {
-        \input preamble/latex
-        \ifpdf
-            \input preamble/pdflatex
-        \fi
-    }
+  {\input preamble/engine/xelatex}
+  {
+    \input preamble/engine/latex
+    \ifpdf\input preamble/engine/pdflatex\fi
+  }
 }
 
 \input preamble/pkg
@@ -50,11 +67,10 @@
 \input preamble/local
 
 \iftexht
-    \input preamble/tex4ht
+\input preamble/engine/tex4ht
 \fi
 
 %%% Local Variables: 
 %%% mode: latex
-%%% TeX-master: "default"
 %%% coding: utf-8-unix
 %%% End: 
