@@ -1,3 +1,12 @@
+## [1.0.8](https://github.com/yamadharma/kermit-makefiles/compare/v1.0.7...v1.0.8) (2025-03-17)
+
+
+### Bug Fixes
+
+* **makefiles:** disable loading bibtex/common ([ba8c077](https://github.com/yamadharma/kermit-makefiles/commit/ba8c07795e5e177d869ba7d9615983327a0b0fa6))
+
+
+
 ## [1.0.7](https://github.com/yamadharma/kermit-makefiles/compare/v1.0.6...v1.0.7) (2025-03-17)
 
 
