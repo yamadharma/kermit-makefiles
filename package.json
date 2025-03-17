@@ -1,6 +1,6 @@
 {
     "name": "kermit-makefiles",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Scripts for LaTeX projects",
     "main": "index.js",
     "repository": "git@github.com:yamadharma/kermit-makefiles.git",
