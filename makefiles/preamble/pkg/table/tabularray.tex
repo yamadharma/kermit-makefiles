@@ -1,11 +1,30 @@
-%%% Use package tabularray
+%%% Package `tabularray`
 
 %%% Code:
 
+%%%% tabularray package
 \usepackage{tabularray}
 
-%%%% booktabs support
+%%%%% booktabs support
 \UseTblrLibrary{booktabs}
+
+%%%%% Define environments with `rowsep=2pt`
+\UseTblrLibrary{amsmath}
+
+%%%%% Load diagbox package
+\UseTblrLibrary{diagbox}
+
+%%%%% Load `siunitx` package, and defines `S` column as `Q` column with `si` key
+\UseTblrLibrary{siunitx}
+
+%%%% Extra libraries for the tabularray package
+\usepackage{tblr-extras}
+
+%%%%% Using the settings defined by the caption package
+\UseTblrLibrary{caption}
+
+%%%%% babel for the longtblr environment
+\UseTblrLibrary{babel}
 
 %%% Local Variables:
 %%% mode: latex
