@@ -4,24 +4,26 @@
 %% emerge media-fonts/ibm-plex
 %% emerge media-fonts/stix-fonts
 
-\setmainfont[Ligatures={Common,TeX},Scale=0.94]{IBM Plex Serif}
-\setromanfont[Ligatures={Common,TeX},Scale=0.94]{IBM Plex Serif}
-\setsansfont[Ligatures={Common,TeX},Scale=MatchLowercase,Scale=0.94]{IBM Plex Sans}
-\setmonofont[Scale=MatchLowercase,Scale=0.94,FakeStretch=0.9]{IBM Plex Mono}
+%%% Manual configuration
+% \setmainfont[Ligatures={Common,TeX},Scale=0.94]{IBM Plex Serif}
+% \setromanfont[Ligatures={Common,TeX},Scale=0.94]{IBM Plex Serif}
+% \setsansfont[Ligatures={Common,TeX},Scale=MatchLowercase,Scale=0.94]{IBM Plex Sans}
+% \setmonofont[Scale=MatchLowercase,Scale=0.94,FakeStretch=0.9]{IBM Plex Mono}
 
-\makeatletter
-\AtBeginDocument{%
-  \@ifpackageloaded{unicode-math}{%
-    \setmathfont{STIX Two Math}
-  }{}
-}
-\makeatother
+% \makeatletter
+% \AtBeginDocument{%
+%   \@ifpackageloaded{unicode-math}{%
+%     \setmathfont{STIX Two Math}
+%   }{}
+% }
+% \makeatother
 
+%%% Load package
 \usepackage[%
-DefaultFeatures={Scale=0.94},
-TT={Scale=MatchLowercase,FakeStretch=0.9},
-DefaultFeatures={Ligatures=Common},
-math
+  DefaultFeatures={Scale=0.94},
+  TT={Scale=MatchLowercase,FakeStretch=0.9},
+  DefaultFeatures={Ligatures=Common},
+  math
 ]{plex-otf}
 
 %%% Features
